@@ -6,7 +6,7 @@
   /* Spread boxes evenly horizontally */
   align-items: center;
   /* Center vertically within the section */
-  padding: 20px;
+  /* padding: 20px; */
   /* Add space around the boxes */
   /*max-height: 64.5vh; */
   /* Set a maximum height to prevent overflow */
@@ -33,7 +33,7 @@
   margin: 10px;
 
   /* border: 1px solid #ccc; */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
   text-align: center;
 
   cursor: pointer;
@@ -47,7 +47,7 @@
   margin: 10px;
 
   /* border: 1px solid #ccc; */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
   text-align: center;
 
   cursor: pointer;
@@ -80,7 +80,7 @@
 }
 
 .product-box:hover {
-  transform: scale(0.9);
+  transform: scale(1.05);
 }
 
 
@@ -139,9 +139,10 @@ section {
 
 
 .h1 {
-  color: rgb(140, 66, 66);
+  color: rgb(0, 0, 0);
   align-items: center;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Alex Brush', cursive; /* Apply Alex Brush font to the entire document */
+font-size: 52px;
   
  
 }
