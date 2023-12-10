@@ -7,7 +7,7 @@
     <title>Mattis Cohen Art</title>
     <link rel="shortcut icon" href="assets/Images/1.jpg" type="icon">
     <link rel="stylesheet" type="text/css" href="style.css">
-
+    <script src="app.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
     <style>
         /* Common styles for all screen sizes */
@@ -137,15 +137,30 @@
         <div class="images-container">
 
             <div class="product-box-D">
-                <img src="assets/Images/8-A.jpg" alt="Product 1">
-                
+                <img alt="Product 1" id="image1">
             </div>
 
             <div class="product-box-D">
-                <img src="assets/Images/8-B.jpg" alt="Product 2">
-               
+                <img alt="Product 2" id="image2">
             </div>
-
+            <script>
+                function dynamicImage() {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const imageUrl = 'assets/Images/' + urlParams.get('item');
+        
+                    // Set the 'src' attribute of the image element
+                    if (imageUrl) {
+                        const imageElement1 = document.getElementById('image1');
+                        const imageElement2 = document.getElementById('image2');
+                        imageElement1.src = imageUrl + '-A.jpg' ;
+                        imageElement2.src = imageUrl + '-B.jpg';
+                        console.error(imageUrl);
+                    } else {
+                        console.error('Image URL not provided in the query parameters.');
+                    }
+                }
+                dynamicImage()
+            </script>
             <!-- Add more product boxes as needed -->
         </div>
     </div>
@@ -157,7 +172,7 @@
         </center>
     </footer>
 
-    <script src="app.js"></script>
+
 </body>
 
 </html>
