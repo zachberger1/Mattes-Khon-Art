@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
     <style>
-      
+        /* Common styles for all screen sizes */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -31,6 +31,7 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+            flex-wrap: wrap; /* Add wrap to allow content to go to the next line */
             margin-top: 100px;
             padding: 20px;
         }
@@ -39,13 +40,6 @@
             flex: 1;
             padding: 20px;
             text-align: justify;
-        }
-
-        .images-container {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
         }
 
         .product-box {
@@ -60,6 +54,11 @@
         .product-box img {
             max-width: 100%;
             max-height: 100%;
+        }
+
+        .product-description {
+            margin-top: 10px;
+            text-align: center; /* Center the description text */
         }
 
         footer {
@@ -83,6 +82,32 @@
             background-color: #ffffff;
             color: #837272;
         }
+
+        /* Responsive styles for small screens */
+        @media only screen and (max-width: 600px) {
+            .product-box {
+                width: 100%;
+            }
+
+            .product-description {
+                margin-top: 10px;
+                text-align: justify; /* Adjust text alignment for small screens */
+            }
+        }
+
+        /* Responsive styles for medium screens */
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            .product-box {
+                width: calc(50% - 20px);
+            }
+        }
+
+        /* Responsive styles for large screens */
+        @media only screen and (min-width: 1025px) {
+            .product-box {
+                width: calc(33.33% - 20px);
+            }
+        }
     </style>
 </head>
 
@@ -95,8 +120,8 @@
             <ul></ul>
         </nav>
     </header>
-<br>
-<br><br><br>
+    <br>
+    <br><br><br><br><br>
     <div class="content-container">
         <div class="description">
             <h2>About Mattis Cohen Art</h2>
@@ -110,22 +135,21 @@
         </div>
 
         <div class="images-container">
-            
-                <div class="product-box-D">
-                    <img src="assets/Images/9-A.jpg" alt="Product 1">
-                </div>
-            
 
-            
-                <div class="product-box-D">
-                    <img src="assets/Images/9-B.jpg" alt="Product 2">
-                </div>
-            
+            <div class="product-box-D">
+                <img src="assets/Images/9-A.jpg" alt="Product 1">
+                
+            </div>
+
+            <div class="product-box-D">
+                <img src="assets/Images/9-B.jpg" alt="Product 2">
+               
+            </div>
 
             <!-- Add more product boxes as needed -->
         </div>
     </div>
-  </div>
+    </div>
     <footer>
         <center>
             <h1>For more information and purchasing <a href="mailto:mattiscohenart@gmail.com" target="_blank"
