@@ -88,6 +88,15 @@
             .product-box {
                 width: 100%;
             }
+            header {
+            background-color: rgb(239, 214, 188);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          
+        }
 
             .product-description {
                 margin-top: 10px;
@@ -99,7 +108,18 @@
         @media only screen and (min-width: 601px) and (max-width: 1024px) {
             .product-box {
                 width: calc(50% - 20px);
+
             }
+            header {
+            background-color: rgb(239, 214, 188);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+         
+        }
+
         }
 
         /* Responsive styles for large screens */
@@ -134,7 +154,7 @@
             </p>
         </div>
 
-        <div class="images-container">
+        <!-- <div class="images-container"> -->
 
             <div class="product-box-D">
                 <img alt="Product 1" id="image1">
@@ -165,7 +185,7 @@
         </div>
     </div>
     </div>
-    <footer>
+    <footer class="footer12" >
         <center>
             <h1>For more information and purchasing <a href="mailto:mattiscohenart@gmail.com" target="_blank"
                     class="a1">contact us</a></h1>
