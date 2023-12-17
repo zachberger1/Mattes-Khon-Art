@@ -1,23 +1,15 @@
 .product-container {
   display: flex;
   flex-wrap: wrap;
-  /* Allow wrapping on smaller screens */
   justify-content: space-between;
-  /* Spread boxes evenly horizontally */
   align-items: center;
-  /* Center vertically within the section */
-  /* padding: 20px; */
-  /* Add space around the boxes */
-  /*max-height: 64.5vh; */
-  /* Set a maximum height to prevent overflow */
+ 
 }
 
 .product-container-D {
   display: flex;
   flex-wrap: wrap;
-  /* Allow wrapping on smaller screens */
-
-  /* Spread boxes evenly horizontally */
+  
   align-items: center;
   /* Center vertically within the section */
   /* padding: 20px; */
@@ -85,14 +77,7 @@
 
 
 
-.product-number {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  /* Adjust the distance from the right as needed */
-  font-weight: bold;
-  /* Make the number bold */
-}
+
 
 body {
   margin: 0;
@@ -102,16 +87,21 @@ body {
 /* Apply the following styles to the header */
 header {
   background-color: rgb(239, 214, 188);
-  
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }
 
+
+/*////////////////////////////////////
+///                                ///
+///         Miscelaneus            ///
+///                                ///
+////////////////////////////////////*/
 
 nav ul {
   list-style-type: none;
@@ -194,7 +184,7 @@ footer h1 {
 
 
 
-.footer {
+.footer-index {
   background-color: #3b3b3b;
   color: #fff;
   padding-top: 20px;
@@ -213,81 +203,6 @@ footer h1 {
   color: #837272;
   /* Change text color on hover to white */
 }
-
-
-.login-container {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: right;
-  width: 50%;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding-left: 5px;
-  padding-right: 25px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-}
-
-
-
-
-
-
-
-
-.login-container {
-  text-align: center;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  position: relative;
-  /* Set container to relative positioning */
-  padding-right: 25px;
-}
-
-
-
-
-
-
-/* Style for the "If you already have an account" button */
-
-
-
-.password-container {
-  text-align: center;
-  background-color: #f4f4f4;
-  padding-bottom: 0px;
-  padding-top: 0px;
-  /* padding-right: 40px; */
-  border-radius: 10px;
-  width: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 53%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Center both horizontally and vertically */
-}
-
-
-
-
-
-
-
-
-
- 
 
 
 .a1 {
@@ -311,23 +226,21 @@ label {
   align-items: end;
   position: absolute;
 }
-.img3{max-width: 60%;
-
-}
+.img3{max-width: 60%;}
 
 
 
-.footer12 {
+
+
+.footer-item {
   background-color: #3b3b3b;
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 10%;
   position: fixed;
   bottom: 0;
-
   width: 100%;
-  /* Span the entire width of the viewport */
+ 
   
 }
 .product-link {
@@ -341,3 +254,31 @@ label {
   text-align: right;
 }
 
+.a1:hover {
+  background-color: #ffffff;
+  color: #837272;
+}
+
+.content-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Add wrap to allow content to go to the next line */
+  margin-top: 100px;
+  padding: 20px;
+  margin-bottom: 120px;
+}
+
+.description {
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+}
+
+
+
+
+.product-description {
+  margin-top: 10px;
+  text-align: center; /* Center the description text */
+}
