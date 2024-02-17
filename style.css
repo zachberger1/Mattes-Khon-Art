@@ -39,20 +39,23 @@
   text-align: center;
   cursor: pointer;
   position: relative;
+  transition: transform 0.2s;
 }
 .product-box-D img {
   max-width: 100%;
-
+  transition: transform 0.2s;
   max-height: 100%;
 }
 .product-box img {
   max-width: 100%;
   /* height: auto; */
   max-height: 100%;
+  transition: transform 0.2s;
 }
 
 .product-container1 {
   display: flex;
+  transition: transform 0.2s;
   flex-wrap: wrap;
   /* Allow wrapping on smaller screens */
   /* justify-content: space-between; */
@@ -67,6 +70,7 @@
 
 .product-box:hover {
   transform: scale(1.05);
+  transition: transform 0.2s;
 }
 
 
