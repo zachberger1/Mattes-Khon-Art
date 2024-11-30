@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+        })();
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Mattis Cohen Art</h1>
+    </header>
+
+    <section>
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="a-contactLink">Send Message</button>
+            </form>
+            <p id="status-message"></p>
+        </div>
+    </section>
+    <footer class="footer-index">
+        <h1>For more information and purchasing <a href="Form.html" class="a-contactLink">contact us</a></h1>
+    </footer>
+
+
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const serviceID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
+            const templateID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    document.getElementById("status-message").textContent = "Message sent successfully!";
+                    document.getElementById("contact-form").reset();
+                }, (err) => {
+                    document.getElementById("status-message").textContent = `Failed to send message. Error: ${err}`;
+                });
+        });
+    </script>
+</body>
+
+</html>

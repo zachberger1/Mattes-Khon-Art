@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+
 }
 
 /* Header Styling */
@@ -103,13 +104,14 @@ nav ul li a:hover {
   position: sticky;
   bottom: 0;
   width: 100%;
+  
 }
 
 .footer-index h1 {
   margin: 0;
 }
 
-.footer-index .a1 {
+.footer-index .a-contactLink {
   color: #fff;
   text-decoration: none;
   background-color: #5a5757;
@@ -117,7 +119,7 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-.footer-index .a1:hover {
+.footer-index .a-contactLink:hover {
   background-color: #ffffff;
   color: #837272;
 }
@@ -134,6 +136,35 @@ nav ul li a:hover {
   padding: 20px;
 }
 
+.a1 {
+  color: #fff;
+  border: 5px;
+  border-color: #ff0000c9;
+  background-color: rgb(117, 109, 109);
+}
+
+
+
+.a1:hover {
+  background-color: #ffffff;
+  /* Change background color on hover to red */
+  color: #837272;
+  /* Change text color on hover to white */
+}
+
+.a1 {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  /* Remove underline from the link */
+  color: #ffffff;
+  /* Set the text color to red */
+  background-color: #5a5757;
+  /* Set the background color to white */
+
+
+}
 /* Product Box Styling */
 .product-box-D {
   width: 300px;
@@ -184,4 +215,57 @@ nav ul li a:hover {
 .product-description {
   margin-top: 10px;
   text-align: center;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+.contact-form h2 {
+  color: #8e2323;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #8e2323;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #6b1414;
 }
