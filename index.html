@@ -43,7 +43,7 @@
     }
 
     /* Rotating Images */
-    @keyframes fade {
+    /* @keyframes fade {
       0% {
         opacity: 1;
       }
@@ -79,17 +79,17 @@
 
     .background:nth-child(4) {
       animation: fade 16s infinite 12s;
-    }
+    } */
 
     .H1-title {
       color: #000000;
-       transform: translate(-50%, -50%); 
-       position: absolute; 
+      transform: translate(-50%, -50%);
+      position: absolute;
       top: 35%;
       left: 50%;
       font-family: "Alex Brush", cursive;
       font-size: 100px;
-   
+
     }
 
     header {
@@ -107,6 +107,71 @@
       padding-top: 20px;
       padding-bottom: 20px;
     }
+
+    /* Ensure the container centers content */
+    .index-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background image to cover the entire viewport and stay behind */
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      /* Places it behind content */
+    }
+
+    /* Content elements positioning to avoid overlap */
+    .H1-title,
+    .artist-description,
+    .product-container {
+      z-index: 1;
+      /* Ensures content is above the background */
+    }
+
+    /* Responsive content centering */
+    .artist-description {
+      max-width: 90%;
+      margin: 20px auto;
+    }
+
+    .artist-description {
+      align-items: center;
+      padding: 20px;
+      max-width: 800px;
+      background-color: #f9f5f0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .Sold {
+      position: absolute;
+      bottom: 50%;
+      left: 40%;
+      background-color: rgb(255, 0, 0);
+      color: #fff;
+      padding: 3px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -115,16 +180,7 @@
 
   <div class="index-container">
     <div>
-      <img src="assets/backround/1.jpg" alt="" class="background">
-      <img src="assets/backround/2.jpg" alt="" class="background">
-      <img src="assets/backround/3.jpg" alt="" class="background">
-      <img src="assets/backround/4.jpg" alt="" class="background">
-      <img src="assets/backround/5.jpg" alt="" class="background">
-      <img src="assets/backround/6.jpg" alt="" class="background">
-      <img src="assets/backround/7.jpg" alt="" class="background">
-      <img src="assets/backround/8.jpg" alt="" class="background">
-      <img src="assets/backround/9.jpg" alt="" class="background">
-      <img src="assets/backround/10.jpg" alt="" class="background">
+
       <img src="assets/backround/9.jpg" alt="" class="background">
 
       <h1 class="H1-title">Mattis Cohen Art</h1>
@@ -132,37 +188,126 @@
     <header>
       <h1>Gallery</h1>
     </header>
+    
+  </div>
+  <div class="artist-description">
+
+    <p>
+      Mattis Cohen is a Jerusalem artist, specializing in copper art with a specific focus on menorah designs.
+      Every menorah is completely individual in its style and structure. Each design is carefully handmade,
+      making every single menorah a uniquely exquisite piece of art with its own distinct personality.
+      This singular and exclusive artist also makes beautiful and striking vases, as well as lifesize replicas
+      of stylized monograms for events.
+    </p>
+
   </div>
   <!-- Responsive Photo Grid -->
   <div class="product-container">
+    <!-- Column 1 -->
     <div class="column">
-      <a href="1.html"><img src="assets/Images/1.jpg" alt="Product 1"></a>
-      <a href="2.html"><img src="assets/Images/2.jpg" alt="Product 2"></a>
-      <a href="3.html"><img src="assets/Images/3.jpg" alt="Product 3"></a>
-      <a href="3.html"><img src="assets/Images/13.jpg" alt="Product 3"></a>
+      <a href="1.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/1.jpg" alt="Product 1">
+          <div class="price-tag">$3000</div>
+        </div>
+      </a>
+      <a href="2.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/2.jpg" alt="Product 2">
+          <div class="price-tag">$1500</div>
+        </div>
+      </a>
+      <a href="3.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/3.jpg" alt="Product 3">
+          <div class="price-tag">$2000</div>
+        </div>
+      </a>
+      <a href="13.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/13.jpg" alt="Product 13">
+          <div class="price-tag">$5000</div>
+        </div>
+      </a>
     </div>
+
+    <!-- Column 2 -->
     <div class="column">
-      <a href="4.html"><img src="assets/Images/4.jpg" alt="Product 4"></a>
-      <a href="5.html"><img src="assets/Images/5.jpg" alt="Product 5"></a>
-      <a href="6.html"><img src="assets/Images/6.jpg" alt="Product 6"></a>
+      <a href="4.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/4.jpg" alt="Product 4">
+          <div class="Sold">Sold</div>
+          <div class="price-tag">$5000</div>
+          
+        </div>
+      </a>
+      <a href="5.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/5.jpg" alt="Product 5">
+          <div class="Sold">Sold</div>
+          <div class="price-tag">$1000</div>
+        </div>
+      </a>
+      <a href="6.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/6.jpg" alt="Product 6">
+          <div class="price-tag">$1000</div>
+        </div>
+      </a>
     </div>
+
+    <!-- Column 3 -->
     <div class="column">
-      <a href="7.html"><img src="assets/Images/7.jpg" alt="Product 7"></a>
-      <a href="8.html"><img src="assets/Images/8.jpg" alt="Product 8"></a>
-      <a href="9.html"><img src="assets/Images/9.jpg" alt="Product 9"></a>
+      <a href="7.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/7.jpg" alt="Product 7">
+          <div class="Sold">Sold</div>
+          <div class="price-tag">$2000</div>
+        </div>
+      </a>
+      <a href="8.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/8.jpg" alt="Product 8">
+          <div class="price-tag">$3000</div>
+        </div>
+      </a>
+      <a href="9.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/9.jpg" alt="Product 9">
+          <div class="price-tag">$1500</div>
+        </div>
+      </a>
     </div>
+
+    <!-- Column 4 -->
     <div class="column">
-      <a href="10.html"><img src="assets/Images/10.jpg" alt="Product 10"></a>
-      <a href="11.html"><img src="assets/Images/11.jpg" alt="Product 11"></a>
-      <a href="12.html"><img src="assets/Images/12.jpg" alt="Product 12"></a>
+      <a href="10.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/10.jpg" alt="Product 10">
+          <div class="price-tag">$2500</div>
+        </div>
+      </a>
+      <a href="11.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/11.jpg" alt="Product 11">
+          <div class="price-tag">$10000</div>
+        </div>
+      </a>
+      <a href="12.html" class="product-link">
+        <div class="product-box">
+          <img src="assets/Images/12.jpg" alt="Product 12">
+          <div class="price-tag">$2000</div>
+        </div>
+      </a>
     </div>
   </div>
 
-  <!-- Footer Section -->
-  <!-- <footer class="footer-index">
-    <h1>For more information and purchasing <a href="Form.html" class="a-contactLink">contact us</a></h1>
+  <div class="P-B">
+    <a href="Form.html">
+      For more information<br>and purchasing
+    </a>
+  </div>
 
-  </footer> -->
 
 </body>
 

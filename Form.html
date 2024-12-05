@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
     <script>
         (function () {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+            emailjs.init("F8XLGA32uzsP6HpxD"); // Replace with your EmailJS public key
         })();
     </script>
 
@@ -42,18 +42,14 @@
             <p id="status-message"></p>
         </div>
     </section>
-    <footer class="footer-index">
-        <h1>For more information and purchasing <a href="Form.html" class="a-contactLink">contact us</a></h1>
-    </footer>
-
-
+   
 
     <script>
         document.getElementById("contact-form").addEventListener("submit", function (event) {
             event.preventDefault();
 
-            const serviceID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-            const templateID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
+            const serviceID = "service_j3ms88j"; // Replace with your EmailJS service ID
+            const templateID = "template_efxhy4m"; // Replace with your EmailJS template ID
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
