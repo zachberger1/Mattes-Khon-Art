@@ -3,11 +3,14 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PMR6KWRQ');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PMR6KWRQ');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -183,13 +186,19 @@
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMR6KWRQ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMR6KWRQ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <div class="index-container">
     <div>
+      <div id="launcher">
+
+        <button class="app-icon instagram" onclick="openApp('instagram')"></button>
+
+      </div>
+
 
       <img src="assets/backround/9.jpg" alt="" class="background">
 
@@ -263,7 +272,7 @@
           <div class="price-tag">$1,500</div>
         </div>
       </a>
-     
+
     </div>
 
     <!-- Column 2 -->
@@ -422,6 +431,22 @@
     </a>
   </div>
 
+  <script>
+
+
+
+    function openApp(appName) {
+      // You can define actions to open each app here
+      switch (appName) {
+        case 'instagram':
+          window.open('https://www.instagram.com/mattis_cohen_art/profilecard/?igsh=ZXpvYXlwcjhveDN2', '_blank');
+          break;
+        // Add more cases for other apps
+        default:
+          console.log('Unknown app');
+      }
+    }
+  </script>
 
 </body>
 
